@@ -9,7 +9,7 @@ action :create do
         block do
             @lvm.raw "pvcreate #{new_resource.name}"
         end
-        only_if @lvm.physical_volumes[new_resource.name].nil?
+        only_if { @lvm.physical_volumes[new_resource.name].nil? }
     end
 end
 
