@@ -46,4 +46,4 @@ attribute :mirrors, :kind_of => Integer, :callbacks => must_be_greater_than_0
 attribute :contiguous, :kind_of => [TrueClass, FalseClass]
 attribute :readahead, :kind_of => [ Integer, String ], :equal_to => [ 2..120, 'auto', 'none' ].flatten!
 
-actions :create, :extend
+actions :create
